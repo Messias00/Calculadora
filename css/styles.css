@@ -1,0 +1,73 @@
+/*Reseta toda a pagina*/
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: sans-serif;
+    font-weight: 500;/*espessura da fonte*/
+    font-size: 22px;
+}
+
+body {
+    display: flex; /*serve para centralizar os itens dentro do body*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;/*com 100 fica exatamente no centro*/
+    background: #41002d;
+}
+
+input {
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=text] {/*estilizar primeiramente os inputs que são do tipo text*/
+    width: calc(100% - 4px);
+    height: 40px;
+}
+
+input[type=button] {/*estilizar primeiramente os inputs que são do tipo button*/
+    width: 100px;
+    height: 50px;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+
+/*Div calculadora*/
+div#calculadora div {/*tudo que estiver dentro da div calculadora e for div*/
+    display: flex;/*Deixe que todos os itens flexíveis tenham o mesmo comprimento*/
+}
+
+#quarta input:nth-child(1) {/*o input que for o primeiro da div#quarta */
+    background: #f11a1a;
+    border-bottom-left-radius: 35px;
+}
+
+#quarta input:nth-child(3) {/*o input que for o penultimo da div#quarta */
+    background: #2313b1;
+}
+
+#quarta input:nth-child(4) {/*o input que for o ultimo da div#quarta */
+    background: #07d434;
+    border-bottom-right-radius: 35px;
+}
+
+div#calculadora div input:nth-child(4) {/*todas as divs que estiver dentro da dela e estiver um input e esse inpute do nth-child, ou seja todo quarto input de toda div que estiver dentro da div calculadora ele vai ter uma cor um pouco mais escura*/
+    /*filter: brightness(70%);/*passando um brilho de 50%*/
+    background: #b4b4b4;
+}
+
+input[type=button]:hover {/*quando passar o mouse em cima do botão*/
+    filter: brightness(50%);
+}
+
+input[type=button]:active {/*quando clicar no botão vai ter um efeito*/
+    transform: scale(0.9);/*botão vai dimuir um pouco quand for clicado*/
+}
+
+#calculadora {
+    box-shadow: 0px 0 20px black;/*primeio é horizontal, vertical */
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
